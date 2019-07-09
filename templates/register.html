@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block hole %}
+    <div class="content">
+		<div class="wid_con loginbox">
+			<div class="register_txt">
+				<h1>注册流程</h1>
+				<img src="{% static 'images/registe_pic.png' %}">
+			</div>
+			<div class="register_con password_con">
+				<div class="text_box">
+					<div>
+						<div><i><img src="{% static 'images/icon01.png' %}"></i><input type="text" placeholder="请输入数字用户名">
+							<span>*</span>
+						</div>
+						<div><i><img src="{% static 'images/icon04.png' %}"></i><input type="text" placeholder="请输入您的邮箱">
+							<span>*</span>
+						</div>
+						<div><i><img src="{% static 'images/icon02.png' %}"></i><input type="password" placeholder="请输入您的密码">
+							<span>*</span>
+						</div>
+						<div><i><img src="{% static 'images/icon02.png' %}"></i><input type="password" placeholder="请再次输入您的密码">
+							<span>*</span>
+						</div>
+						<div class="yzm">
+							<i><img src="{% static 'images/icon03.png' %}"></i><input type="text" placeholder="请输入验证码">
+							<label><img src="{% static 'images/yzm.png' %}"></label><span>*</span>
+						</div>
+						<h4><a href="#">《网站服务协议》</a></h4>
+						<button>同意以上协议并注册</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}

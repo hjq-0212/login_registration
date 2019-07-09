@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block hole %}
+	<div class="content">
+		<div class="wid_con loginbox">
+			<div class="border_box">
+				<div class="box_skitter box_skitter_large">
+					<ul>
+						<li><img src="{% static 'images/login_pic01.jpg' %}" class="cube" /></li>
+						<li><img src="{% static 'images/case_bg.jpg' %}" class="cubeRandom" /></li>
+						<li><img src="{% static 'images/banner1.jpg' %}" class="cubeStop" /></li>
+					</ul>
+				</div>
+			</div>
+			<div class="login_con">
+				<h1>登录/LOGIN</h1>
+				<div class="text_box">
+					<div>
+						<div><i><img src="{% static 'images/icon01.png' %}"></i><input type="text" placeholder="请输入WangID号码"></div>
+						<div><i><img src="{% static 'images/icon02.png' %}"></i><input type="password" placeholder="请输入密码"></div>
+						<div class="yzm">
+							<i><img src="{% static  'images/icon03.png' %}"></i><input type="text" placeholder="请输入验证码">
+							<label><img src="{% static 'images/yzm.png' %}"></label>
+						</div>
+						<h3>
+							<a href="{% url 'password' %}">忘记密码？</a>
+							<a href="{% url 'register' %}">没有帐号？免费注册！</a>
+						</h3>
+						<button>登 录</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
