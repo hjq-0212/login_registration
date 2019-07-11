@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,15 +7,28 @@
 <meta name="description" content="名榜,wangid">
 <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-<title>免费注册</title>
+<title>登录</title>
 <!-- css -->
-<link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+<link href="{% static 'css/skitter.styles.css' %}" type="text/css" media="all" rel="stylesheet" />
 <!-- js -->
-<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
-<script type="text/javascript" src="{%  static  "js/public.js" %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/public.js' %}"></script>
 <script type="text/javascript" language="javascript" src="{% static 'js/jquery.easing.1.3.js' %}"></script>
 <script type="text/javascript" language="javascript" src="{% static 'js/jquery.skitter.min.js' %}"></script>
-
+<!-- Init Skitter -->
+<script type="text/javascript" language="javascript">
+	$(document).ready(function() {
+		$('.box_skitter_large').skitter({
+			theme: 'clean',
+			numbers_align: 'center',
+			progressbar: false,
+			dots: true,
+			preview: true,
+			stop_over:false,
+		});
+	});
+</script>
 
 </head>
 
@@ -25,9 +38,9 @@
 			<div class="top_con">
 				<div class="top_logo">
 					<a href="http://www.wangid.com">
-						<img src={% static "images/logo_touming.gif" %}>
+						<img src="{% static 'images/logo_touming.gif' %}">
 					</a>
-					<span>免费注册/Register</span>
+					<span>登录/Login</span>
 				</div>
 				<div class="top_menu">
 					<ul>
@@ -43,14 +56,15 @@
 			</div>
 		</div>
 	</div>
-    {% block hole %}
+    {% block  hole %}
 
     {% endblock %}
 
-    <div class="footer">
+
+	<!-- footer -->
+	<div class="footer">
 		<p>版权所有&nbsp;&nbsp;&nbsp;Copyright © WangID驰通网络&nbsp;&nbsp;&nbsp;&nbsp;电话：400-6677-937</p>
 		<p><a>京ICP备：14012449号</a>黔ICP证：黔B2-20140009号<span>京公网安备：11010602030054号</span></p>
 	</div>
-
 </body>
 </html>
