@@ -9,28 +9,35 @@
 				<img src="{% static 'images/registe_pic.png' %}">
 			</div>
 			<div class="register_con password_con">
+
+
+                <form action="{% url 'register' %}" method="post" >
 				<div class="text_box">
-					<div>
-						<div><i><img src="{% static 'images/icon01.png' %}"></i><input type="text" placeholder="请输入数字用户名">
+                        {% csrf_token %}
+                       <div>
+						<div><i><img src="{% static 'images/icon01.png' %}"></i><input type="text" placeholder="请输入数字用户名" name="account">
 							<span>*</span>
 						</div>
-						<div><i><img src="{% static 'images/icon04.png' %}"></i><input type="text" placeholder="请输入您的邮箱">
+						<div><i><img src="{% static 'images/icon04.png' %}"></i><input type="text" placeholder="请输入您的邮箱" name="email">
 							<span>*</span>
 						</div>
-						<div><i><img src="{% static 'images/icon02.png' %}"></i><input type="password" placeholder="请输入您的密码">
+						<div><i><img src="{% static 'images/icon02.png' %}"></i><input type="password" placeholder="请输入您的密码" name="password1">
 							<span>*</span>
 						</div>
-						<div><i><img src="{% static 'images/icon02.png' %}"></i><input type="password" placeholder="请再次输入您的密码">
+						<div><i><img src="{% static 'images/icon02.png' %}"></i><input type="password" placeholder="请再次输入您的密码" name="password2">
 							<span>*</span>
 						</div>
 						<div class="yzm">
-							<i><img src="{% static 'images/icon03.png' %}"></i><input type="text" placeholder="请输入验证码">
+							<i><img src="{% static 'images/icon03.png' %}"></i><input type="text" placeholder="请输入验证码" name="yzm">
 							<label><img src="{% static 'images/yzm.png' %}"></label><span>*</span>
 						</div>
 						<h4><a href="#">《网站服务协议》</a></h4>
-						<button>同意以上协议并注册</button>
+						<button><input type="submit" value="同意以上协议并注册"></button>
 					</div>
 				</div>
+                </form>
+
+
 			</div>
 		</div>
 	</div>

@@ -14,24 +14,29 @@
 					</ul>
 				</div>
 			</div>
+
+            <form action="{% url 'index' %}" method="post">
+                {% csrf_token %}
 			<div class="login_con">
 				<h1>登录/LOGIN</h1>
 				<div class="text_box">
 					<div>
-						<div><i><img src="{% static 'images/icon01.png' %}"></i><input type="text" placeholder="请输入WangID号码"></div>
-						<div><i><img src="{% static 'images/icon02.png' %}"></i><input type="password" placeholder="请输入密码"></div>
+						<div><i><img src="{% static 'images/icon01.png' %}"></i><input type="text" placeholder="请输入WangID号码" name="account"></div>
+						<div><i><img src="{% static 'images/icon02.png' %}"></i><input type="password" placeholder="请输入密码" name="password"></div>
 						<div class="yzm">
-							<i><img src="{% static  'images/icon03.png' %}"></i><input type="text" placeholder="请输入验证码">
+							<i><img src="{% static  'images/icon03.png' %}"></i><input type="text" placeholder="请输入验证码" name="yzm">
 							<label><img src="{% static 'images/yzm.png' %}"></label>
 						</div>
 						<h3>
 							<a href="{% url 'password' %}">忘记密码？</a>
 							<a href="{% url 'register' %}">没有帐号？免费注册！</a>
 						</h3>
-						<button>登 录</button>
+						<button><input type="submit" value="登 录"></button>
 					</div>
 				</div>
 			</div>
+            </form>
+
 		</div>
 	</div>
 
